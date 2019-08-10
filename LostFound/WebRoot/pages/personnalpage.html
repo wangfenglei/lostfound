@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>江农个人主页栏</title>
+		<link rel="stylesheet" href="../css/personnalpage.css" />
+	<script>	 
+   function demoDisplay3()
+   {
+	   document.getElementById("middle3").style.display="none";
+	   document.getElementById("middle3y").style.display="none";
+	   document.getElementById("middle3z").style.display="none";
+	   document.getElementById("middle3x").style.display="block";
+	   document.getElementById("topp").style.display="block";
+	   document.getElementById("p3").style.color="red";
+	   document.getElementById("p4").style.color="black";
+	   document.getElementById("p5").style.color="black";
+   }
+   function demoDisplay4()
+   {
+	   document.getElementById("middle3").style.display="none";
+	   document.getElementById("middle3x").style.display="none";
+	   document.getElementById("middle3z").style.display="none";
+	   document.getElementById("middle3y").style.display="block";
+	   document.getElementById("topp").style.display="block";
+	   document.getElementById("p4").style.color="red";
+	   document.getElementById("p3").style.color="black";
+	   document.getElementById("p5").style.color="black";
+   }
+   function demoDisplay5()
+   {
+	   document.getElementById("middle3").style.display="none";
+	   document.getElementById("middle3x").style.display="none";
+	   document.getElementById("middle3y").style.display="none";
+	   document.getElementById("middle3z").style.display="block";
+	   document.getElementById("topp").style.display="block";
+	   document.getElementById("p3").style.color="black";
+	   document.getElementById("p4").style.color="black";
+	   document.getElementById("p5").style.color="red";
+   }
+   
+   function demoDisplay6()
+   {
+	   document.getElementById("middle3").style.display="block";
+	   document.getElementById("middle3x").style.display="none";
+	   document.getElementById("middle3y").style.display="none";
+	   document.getElementById("middle3z").style.display="none";
+	   document.getElementById("topp").style.display="none";
+	   document.getElementById("p3").style.color="black";
+	   document.getElementById("p4").style.color="black";
+	   document.getElementById("p5").style.color="red";
+   }
+   </script>
+	</head>
+	<body>
+		<div id="top">
+    	<div id="word1">
+    	  <a href="mainpage.html" target="_blank"><span>首页</span></a>
+    	</div>
+    	<div id="word2">
+    	  <a href="personnalpage.html" target="_blank"><span>个人主页</span></a>
+    	</div>
+    	<div id="word3">
+    	  <a href="Lost.html" target="_blank"><span>失物招领</span></a>
+    	</div>
+    	<div id="word4">
+    	  <a href="Found.html" target="_blank"><span>寻物启事</span></a>
+    	</div>
+    </div>
+    <div id="allcontent">	
+<div id="content3">
+     <div id="content3x">
+     	<p align="center"><font color="#FFFFFF" size="7">欢迎----</font></p>
+    <div id="left3">
+    <table border="1px" width="100%" height="100%" cellpadding="0" cellspacing="0">
+		      <tr>
+		      	<td height="168px" colspan="2" bgcolor="#FFFFFF"><div id="head"></div></td>
+		      </tr>
+		      <tr>
+		      	<td width="28%" height="80px" class="td"><div id="search"></div></td>
+		      	<td><form><input type="text" name="search" placeholder="搜索" class="inputBox" /></form></td>
+		      </tr>
+		      <tr>
+		      	<td class="td" height="80px"><div id="name"></div></td>
+		      	<td>昵称</td>
+		      </tr>
+		      <tr>
+		      	<td class="td" height="80px"><div id="introduction"></div></td>
+		      	<td><div id="frame"><input type="button" onclick="demoDisplay3()" value="修改资料" class="buttonStyle3" id="p3"></div></td>
+		      </tr>
+		      <tr>
+		      	<td class="td" height="80px"><div id="publish1"></div></td>
+		      	<td><div id="frame"><input type="button" onclick="demoDisplay4()" value="我要发布" class="buttonStyle3" id="p4"></div></td> 
+		      </tr>
+		      <tr>
+		      	<td class="td" height="80px"><div id="publish2"></div></td>
+		      	<td><div id="frame"><input type="button" onclick="demoDisplay5()" value="我发布的" class="buttonStyle3" id="p5"></div></td>
+		      </tr>
+		     </table>	
+		  </div>
+		  <div id="allmiddle">
+		  <div id="middle3">
+		  	<table border="1px" width="100%" height="100%" cellpadding="0" cellspacing="0">
+		      <tr>
+		      	<td height="100px" colspan="2"></td>
+		      </tr>
+		      <tr>
+		      	<td height="66px" colspan="2" bgcolor="#59637c"></td>
+		      </tr>
+		      <tr>
+		      	<td></td>
+		      	<td></td>
+		      </tr>
+		      <tr>
+		      	<td></td>
+		        <td></td>
+		      </tr>
+		   </table>
+		  </div>
+		  <div id="topp"><div id="frame"><input type="button" onclick="demoDisplay6()" value="返回" class="buttonStyle3" id="p6"></div></div>
+		  <div id="middle3x"></div>
+		  <div id="middle3y"></div>
+		  <div id="middle3z"></div>
+		  </div>
+     </div>	
+		</div>
+    
+    </div>
+     <div id="bottom">底部</div>
+	</body>
+</html>

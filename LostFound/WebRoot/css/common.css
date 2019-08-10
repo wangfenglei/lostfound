@@ -1,0 +1,212 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+
+div{
+	width:80%;
+	height:80%;
+}
+
+body
+{
+    font-family: DFKai-SB;
+    font-size: 16px;
+    color: #333;
+    overflow: auto;
+}
+body, html, table, tr, th, td, div, form, img, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+fieldset
+{
+    padding: 10px;
+}
+legend
+{
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #0385AE;
+}
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+td
+{
+    overflow: hidden;
+}
+ul, ol, li, dl, dt, dd
+{
+    list-style: none;
+}
+textarea
+{
+    border: 1px solid #cad9ea;
+    overflow: auto;
+}
+
+a
+{
+    outline: none;
+}
+a:link
+{
+    text-decoration: underline;
+    color: #005DBD;
+}
+a:visited
+{
+    text-decoration: underline;
+    color: #005DBD;
+}
+a:hover
+{
+    text-decoration: none;
+    color: #005DBD;
+}
+a:active
+{
+    text-decoration: none;
+    color: #333;
+}
+
+input
+{
+    vertical-align: middle;
+}
+input[type=button]
+{
+    cursor: pointer;
+}
+input[readonly]
+{
+    background: #EEEEEE;
+}
+select
+{
+    padding: 0;
+    border: 1px solid #B2ACA1;
+    min-width: 100px;
+	height: 20px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 4px;
+}
+
+img
+{
+    vertical-align: middle;
+    border: 0px;
+}
+.clear
+{
+    width: 0px;
+    height: 0px;
+    clear: both;
+}
+.tb, .tb20, .tb30, .tb40, .tb80, .tb100, .tb120, .tb180, .tb250
+{
+    border: solid 1px #B2ACA1;
+    vertical-align: middle;
+    text-align: left;
+    margin: 0px 2px;
+}
+.tb
+{
+    width: 80px;
+}
+.tb20
+{
+    width: 20px;
+}
+.tb30
+{
+    width: 30px;
+}
+.tb40
+{
+    width: 40px;
+}
+.tb80
+{
+    width: 80px;
+}
+.tb100
+{
+    width: 100px;
+}
+.tb120
+{
+    width: 120px;
+}
+
+.tb180
+{
+    width: 180px;
+}
+.tb250
+{
+    width: 250px;
+}
+.tb_sm
+{
+    text-align: left;
+    width: 20px;
+    height: 14px;
+    border: 1px solid #AED9F4;
+    vertical-align: middle;
+}
+.tb:hover, .tb:focus, .tb20:hover, .tb20:focus, .tb30:hover, .tb30:focus, .tb40:hover, .tb40:focus, .tb120:hover, .tb120:focus, .tb180:hover, .tb180:focus, .tb250:hover, .tb250:focus
+{
+}
+.tbfocus
+{
+    background: #E4EBF6;
+    border: solid 1px #AAC5EB;
+}
+
+.btn
+{
+    cursor: pointer;
+	height: 24px;
+}
+
+.border
+{
+    border: solid 1px #cad9ea;
+}
+.error
+{
+    color: Red;
+}
+.green
+{
+    color: Green;
+}
+.red
+{
+    color: Red;
+}
+
+
+/*ХЪХЦЊУ*/
+#overlay
+{
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: none;
+}

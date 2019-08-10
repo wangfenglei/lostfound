@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>江农失物招领首页</title>
+  <link rel="stylesheet" href="../css/mainpage.css" />
+  <script>
+    window.onload = function () {
+            var container = document.getElementById('container');
+            var container2 = document.getElementById('container2');
+            var list = document.getElementById('list');
+            var list2 = document.getElementById('list2');
+            var buttons = document.getElementById('buttons').getElementsByTagName('span');
+            var buttons2 = document.getElementById('buttons2').getElementsByTagName('span');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var prev2 = document.getElementById('prev2');
+            var next2 = document.getElementById('next2');
+            var index = 1;
+            var len = 5;
+            var animated = false;
+            var interval = 3000;
+            var timer;
+            var timerr;
+
+
+            function animate (offset) {
+                if (offset == 0) {
+                    return;
+                }
+                animated = true;
+                var time = 300;
+                var inteval = 10;
+                var speed = offset/(time/inteval);
+                var left = parseInt(list.style.left) + offset;
+
+                var go = function (){
+                    if ( (speed > 0 && parseInt(list.style.left) < left) || (speed < 0 && parseInt(list.style.left) > left)) {
+                        list.style.left = parseInt(list.style.left) + speed + 'px';
+                        setTimeout(go, inteval);
+                    }
+                    else {
+                        list.style.left = left + 'px';
+                        if(left>-200){
+                            list.style.left = -600 * len + 'px';
+                        }
+                        if(left<(-600 * len)) {
+                            list.style.left = '-600px';
+                        }
+                        animated = false;
+                    }
+                    
+                }
+                go();
+            }
+            function animatee(offsett) {
+                if (offsett == 0) {
+                    return;
+                }
+                animated = true;
+                var timee = 300;
+                var intevall = 10;
+                var speedd = offsett/(timee/intevall);
+                var leftt = parseInt(list2.style.left) + offsett;
+
+                var goo=function(){
+                if ( (speedd > 0 && parseInt(list2.style.left) < leftt) || (speedd < 0 && parseInt(list2.style.left) > leftt)) {
+                        list2.style.left = parseInt(list2.style.left) + speedd + 'px';
+                        setTimeout(goo, intevall);
+                    }
+                    else {
+                        list2.style.left = leftt + 'px';
+                        if(leftt>-200){
+                            list2.style.left = -600 * len + 'px';
+                        }
+                        if(leftt<(-600 * len)) {
+                            list2.style.left = '-600px';
+                        }
+                        animated = false;
+                    }
+                    }
+                goo();
+            
+            }
+
+            function showButton() {
+                for (var i = 0; i < buttons.length ; i++) {
+                    if( buttons[i].className == 'on'){
+                        buttons[i].className = '';
+                        break;
+                    }
+                }
+                buttons[index - 1].className = 'on';
+            }
+            function showButtonn() {
+                for (var i = 0; i < buttons2.length ; i++) {
+                    if( buttons2[i].className == 'on'){
+                        buttons2[i].className = '';
+                        break;
+                    }
+                }
+                buttons2[index - 1].className = 'on';
+            }
+
+            function play() {
+                timer = setTimeout(function () {
+                    next.onclick();
+                    play();
+                }, interval);
+            }
+            function stop() {
+                clearTimeout(timer);
+            }
+            function playy() {
+                timerr = setTimeout(function () {
+                    next2.onclick();
+                    playy();
+                }, interval);
+            }
+            function stopp() {
+                clearTimeout(timerr);
+            }
+
+            next.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                if (index == 5) {
+                    index = 1;
+                }
+                else {
+                    index += 1;
+                }
+                animate(-600);
+                showButton();
+            }
+            prev.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                if (index == 1) {
+                    index = 5;
+                }
+                else {
+                    index -= 1;
+                }
+                animate(600);
+                showButton();
+            }
+            next2.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                if (index == 5) {
+                    index = 1;
+                }
+                else {
+                    index += 1;
+                }
+                animatee(-600);
+                showButtonn();
+            }
+            prev2.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                if (index == 1) {
+                    index = 5;
+                }
+                else {
+                    index -= 1;
+                }
+                animatee(600);
+                showButtonn();
+            }
+
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function () {
+                    if (animated) {
+                        return;
+                    }
+                    if(this.className == 'on') {
+                        return;
+                    }
+                    var myIndex = parseInt(this.getAttribute('index'));
+                    var offset = -600 * (myIndex - index);
+
+                    animate(offset);
+                    index = myIndex;
+                    showButton();
+                }
+            }
+            for (var i = 0; i < buttons2.length; i++) {
+                buttons2[i].onclick = function () {
+                    if (animated) {
+                        return;
+                    }
+                    if(this.className == 'on') {
+                        return;
+                    }
+                    var myIndex = parseInt(this.getAttribute('index'));
+                    var offset = -600 * (myIndex - index);
+
+                    animatee(offset);
+                    index = myIndex;
+                    showButtonn();
+                }
+            }
+
+            container.onmouseover = stop;
+            container.onmouseout = play;
+
+            play();
+            container2.onmouseover = stop;
+            container2.onmouseout = play;
+
+            playy();
+
+        }
+
+  </script>
+</head>
+<body>
+		<div id="top">
+    	<div id="word1">
+    	  <a href="mainpage.html" target="_blank"><span>首页</span></a>
+    	</div>
+    	<div id="word2">
+    	  <a href="personnalpage.html" target="_blank"><span>个人主页</span></a>
+    	</div>
+    	<div id="word3">
+    	  <a href="Lost.html" target="_blank"><span>失物招领</span></a>
+    	</div>
+    	<div id="word4">
+    	  <a href="Found.html" target="_blank"><span>寻物启事</span></a>
+    	</div>
+    </div>
+    <div id="allcontent">
+    	
+    <!-- 首页-->
+    <div id="content1a2"> 
+     <div id="content1">   
+      <div id="left1">
+<div id="container"> 		
+    <div id="list" style="left: -600px;">
+        <img src="../img/IMG_4535.JPG" alt="1"/>
+        <img src="../img/IMG_4572.JPG" alt="1"/>
+        <img src="../img/IMG_4588.JPG" alt="2"/>
+        <img src="../img/IMG_4584.JPG" alt="3"/>
+        <img src="../img/IMG_4587.JPG" alt="4"/>
+        <img src="../img/IMG_4535.JPG" alt="5"/>
+        <img src="../img/IMG_4572.JPG" alt="5"/>
+    </div>
+    <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+    </div>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+	  </div>
+      
+      </div>
+      <div id="right1">
+      	<div id="info1">
+      		<table id="table" cellpadding="0" cellspacing="0">
+      			<tr>
+      				<td height="40px" width="380px">
+      					<div class="top">
+      					<input type="button" value="失物招领" class="buttonStyle4" id="p7"> 	
+      					</div>
+      				</td>
+      				<td><div class="topx"><a href="Lost.html"><span>进去看看</span></a></div></td>
+      			</tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      		</table>
+      	</div>
+      	<div id="thankingletter">
+      		<table id="table" cellpadding="0" cellspacing="0">
+      			<tr><td height="40px" ><div class="top">感谢信</div></td></tr>
+      			<tr><td><div></div></td></tr>
+      		</table>
+      	</div>
+      </div>
+     
+     </div>
+     <div id="content2">
+    	<div id="left2">
+    		<div id="middle1" align="center" ></div>
+    		<div id="info2">
+    		  <table id="table" cellpadding="0" cellspacing="0">
+      			<tr>
+      				<td><div class="topx"><a href="Found.html"><span>进去看看</span></a></div></td>
+      				<td height="40px" width="380px">
+      					<div class="top">
+      						<input type="button" value="寻物启事" class="buttonStyle4" id="p9">
+      					</div>
+      				</td>
+      			</tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      			<tr><td>1111</td><td>111</td></tr>
+      		</table>
+    	  </div>
+    	</div>
+      <div id="right2">
+     <div id="container2"> 		
+    <div id="list2" style="left: -600px;">
+        <img src="../img/IMG_4535.JPG" alt="1"/>
+        <img src="../img/IMG_4572.JPG" alt="1"/>
+        <img src="../img/IMG_4588.JPG" alt="2"/>
+        <img src="../img/IMG_4584.JPG" alt="3"/>
+        <img src="../img/IMG_4587.JPG" alt="4"/>
+        <img src="../img/IMG_4535.JPG" alt="5"/>
+        <img src="../img/IMG_4572.JPG" alt="5"/>
+    </div>
+    <div id="buttons2">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+    </div>
+    <a href="javascript:;" id="prev2" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next2" class="arrow">&gt;</a>
+	  </div>
+      </div>
+     </div>
+     
+    </div>
+
+    <div id="bottom">底部</div>
+    </div>    
+</body>
+</html>
+

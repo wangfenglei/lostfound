@@ -1,0 +1,244 @@
+*{ margin: 0; padding: 0; text-decoration: none;}
+body
+{
+ 	margin: 0px;
+ 	padding: 0px;
+ 	background-image: url(../img/IMG_4535.JPG);
+ 	background-repeat: no-repeat;
+ 	background-size: 100%;
+ 	background-attachment: fixed; 	 	
+}
+#top
+{
+ 	width:100%; 
+ 	background-image: url(../img/top.png);
+ 	background-repeat: no-repeat;
+ 	background-size: 100%;
+ 	margin-bottom:0px;
+ 	text-align:left;
+    height: 180px;
+    opacity: 0.7;
+    filter: Alpha(opacity=70);
+    position: relative;
+    z-index: 3;
+}
+#word1
+{
+	margin:0 auto;
+	width: 58px;
+	height: 100px;
+    position:absolute;
+    left:15%;
+    float: left;
+}
+#top span{text-align:center;display: block;font-size: 25px;}
+#top a{cursor:pointer;color:black;display: block;margin-top: 60px;text-decoration: none;}
+#top a:hover{border: 1px solid blue;color:blue;}
+#word2
+{
+	margin:0 auto;
+	width: 105px;
+	height: 100px;
+    position:absolute;
+    left:30%;
+}
+#word3
+{
+    margin:0 auto;
+	width: 105px;
+	height: 100px;
+    position:absolute;
+    left:70%;
+}
+#word4
+{
+    margin:0 auto;
+	width: 105px;
+	height: 100px;
+    position:absolute;
+    left:85%;	
+}
+#allcontent 
+{
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+}
+.td 
+{
+    background-color:#393c4f;
+}
+#content3
+{
+    margin:30px auto;
+    width:80%;height:750px;
+	border: double;
+	position: relative;
+}
+#content3x
+{
+    width:100%;
+    height:750px;
+    display: block;
+}
+#left3
+{
+	background-color:#59637c;
+	width:25%;height:650px;
+	float:left;
+}
+#head
+{
+	margin: 0 auto;
+	border: double;
+ 	width:168px;
+ 	height:168px;
+ 	border-radius:84px;
+ 	background-image: url(../img/logo.png);
+ 	background-size: 100%;
+ 	background-repeat: no-repeat;
+ 	position: relative;
+}
+#search
+{
+	margin: 0 auto;
+	border: double;
+ 	width:80px;
+ 	height:80px;
+ 	border-radius:40px;
+ 	background-image: url(../img/logo.png);
+ 	background-size: 100%;
+ 	background-repeat: no-repeat;
+ 	position: relative;
+}
+.inputBox 
+{
+	border-radius: 10px;
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: 170px;
+    height: 40px;
+    font: 300 20px/80px Arial;
+    display: block;
+    outline: none;
+    border: 1px solid #B7B4B4;
+}
+#name
+{
+	margin: 0 auto;
+	border: double;
+ 	width:80px;
+ 	height:80px;
+ 	border-radius:40px;
+ 	background-image: url(../img/logo.png);
+ 	background-size: 100%;
+ 	background-repeat: no-repeat;
+ 	position: relative;
+}
+#introduction
+{
+	margin: 0 auto;
+	border: double;
+ 	width:80px;
+ 	height:80px;
+ 	border-radius:40px;
+ 	background-image: url(../img/logo.png);
+ 	background-size: 100%;
+ 	background-repeat: no-repeat;
+ 	position: relative;
+}
+#frame
+{ 
+	margin: 0 auto;
+	height: 40px;
+}
+.buttonStyle3
+{
+    display:block;
+    outline: none;
+    color: black;
+    border:none;
+    background:none;
+    cursor: pointer;
+    position: absolute;
+    font: 100 20px/40px Arial;
+}
+#publish1
+{
+	margin: 0 auto;
+	border: double;
+ 	width:80px;
+ 	height:80px;
+ 	border-radius:40px;
+ 	background-image: url(../img/logo.png);
+ 	background-size: 100%;
+ 	background-repeat: no-repeat;
+ 	position: relative;
+}
+#publish2
+{
+	margin: 0 auto;
+	border: double;
+ 	width:80px;
+ 	height:80px;
+ 	border-radius:40px;
+ 	background-image: url(../img/logo.png);
+ 	background-size: 100%;
+ 	background-repeat: no-repeat;
+ 	position: relative;
+}
+#allmiddle
+{
+    position: relative;
+    width: 75%;
+    float:right;
+
+}
+#middle3
+{
+	background-color:white;
+	width:100%;
+	height: 650px;
+	display: block;
+}
+#topp
+{
+	width:100%;
+	height: 40px;
+	background-color:white;
+	display: none;
+}
+#middle3x
+{
+	background-color:white;
+	width:100%;
+	height: 610px;
+	display: none;
+}
+#middle3y
+{
+	background-color:pink;
+	width:100%;
+	height: 610px;
+	display: none;
+}
+#middle3z
+{
+	background-color:skyblue;
+	width:100%;
+	height: 610px;
+	display: none;
+}
+#bottom
+{
+	height:30px;
+	width:100%;
+	background-color:#CCFF00;
+	margin-top:0px;
+	opacity: 0.7;
+    filter: Alpha(opacity=70);
+    position:absolute;
+}
+
